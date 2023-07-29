@@ -8,5 +8,6 @@ async def set_default_commands(dp):
             types.BotCommand("help", "Помощь"),
             types.BotCommand("info", "Получить информация"),
             types.BotCommand("lang", "Изменить язык"),
+            types.BotCommand("testing", "Тест по проф ориентации"),
         ]
     )
