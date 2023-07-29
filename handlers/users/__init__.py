@@ -1,3 +1,4 @@
+from . import
 from . import help
 from . import text_handler
 from . import anketa

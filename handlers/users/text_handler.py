@@ -1,5 +1,6 @@
 from aiogram import types
 from aiogram.dispatcher.filters.builtin import CommandStart, Text
+from aiogram.types import ReplyKeyboardRemove
 
 from loader import dp
 
