@@ -5,8 +5,8 @@ async def set_default_commands(dp):
     await dp.bot.set_my_commands(
         [
             types.BotCommand("start", "🎬Запустить бота"),
-            types.BotCommand('contacts','📱Наши социальные сети'),
-            types.BotCommand('help', '🆘Ответим на ваши вопросы'),
-
+            types.BotCommand('menu','💾Основное меню'),
+            types.BotCommand('lang', '🗣Изменить язык'),
+            types.BotCommand('contact', '🆘Связаться с нами')
         ]
     )
