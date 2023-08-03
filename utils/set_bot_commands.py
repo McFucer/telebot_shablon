@@ -4,10 +4,9 @@ from aiogram import types
 async def set_default_commands(dp):
     await dp.bot.set_my_commands(
         [
-            types.BotCommand("start", "Запустить бота"),
-            types.BotCommand("help", "Помощь"),
-            types.BotCommand("info", "Получить информация"),
-            types.BotCommand("lang", "Изменить язык"),
-            types.BotCommand("testing", "Тест по проф ориентации"),
+            types.BotCommand("start", "🎬Запустить бота"),
+            types.BotCommand('contacts','📱Наши социальные сети'),
+            types.BotCommand('help', '🆘Ответим на ваши вопросы'),
+
         ]
     )
