@@ -20,8 +20,9 @@ async def set_state(msg: types.Message, state: FSMContext):
     await state.set_state('Language')
     await msg.answer("Выберите язык:\nTil tanlang:", reply_markup=lang)
 
+@dp.callback_query_handler(text='back',state='Russian')
 @dp.callback_query_handler(text='rus',state='Language')
-@dp.message_handler(Text(equals='Основное меню', ignore_case=True))
+@dp.message_handler(Text(equals='Основное меню', ignore_case=True),state='Russian')
 async def rus_contains(call:CallbackQuery, state: FSMContext):
     await call.message.answer('''Я бот - MR_IT.
     Могу помочь вам в следующих операций👇:''',reply_markup=starting_menu)
@@ -31,8 +32,9 @@ async def rus_contains(call:CallbackQuery, state: FSMContext):
     await state.finish()
     await state.set_state('Russian')
 
+@dp.callback_query_handler(text='back_uzb',state='Uzbek')
 @dp.callback_query_handler(text='uzbek',state='Language')
-@dp.message_handler(Text(equals='Asosiy menyu', ignore_case=True))
+@dp.message_handler(Text(equals='Asosiy menyu', ignore_case=True),state='Uzbek')
 async def uzbek_contains(call:CallbackQuery,state:FSMContext):
     await call.message.answer('Men MR_IT - botiman.\nMen sizga quyidagi operatsiyalarda yordam bera olaman👇:', reply_markup=starting_menu_uzb)
     await call.message.delete()
