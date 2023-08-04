@@ -1,5 +1,6 @@
 from . import menu
 from . import backs
+from . import courses_all
 from . import text_handler
 from . import anketa
 from . import content_types

@@ -11,7 +11,8 @@ starting_menu = InlineKeyboardMarkup(
         InlineKeyboardButton(text='Курсы',callback_data='courses'),
     ],
     [
-        InlineKeyboardButton(text='Наш сайт',web_app=WebAppInfo(url='https://www.mr-it.uz/home'))
+        InlineKeyboardButton(text='Наш сайт',web_app=WebAppInfo(url='https://www.mr-it.uz/home')),
+        InlineKeyboardButton(text='У меня есть вопросы', url='https://telegra.ph/Voprosy-i-Otvety--MR-IT-08-04'),
     ],
     [
         InlineKeyboardButton(text='Прочие',callback_data='another')
@@ -79,7 +80,7 @@ courses_uzb = InlineKeyboardMarkup(row_width=3,
         InlineKeyboardButton(text='📸Grafik dizayn',callback_data='grafic_uzb'),
     ],
     [
-        InlineKeyboardButton(text='🔙Назад',callback_data='back_uzb'),
+        InlineKeyboardButton(text='🔙Orqaga',callback_data='back_uzb'),
     ],
 ])
 
@@ -90,3 +91,31 @@ courses_uzb = InlineKeyboardMarkup(row_width=3,
 # booksMenu = InlineKeyboardMarkup(row_width=1)
 # for key, value in books.items():
 #     booksMenu.insert(InlineKeyboardButton(text=key,callback_data=callbacks.new(item_name=value)))
+
+mobilgr = InlineKeyboardMarkup()
+mobilgr.insert(InlineKeyboardButton('Посмотреть | Qarash',url='https://www.mr-it.uz/courses/1'))
+
+scratch = InlineKeyboardMarkup()
+scratch.insert(InlineKeyboardButton('Посмотреть | Qarash',url='https://www.mr-it.uz/courses/2'))
+
+founda = InlineKeyboardMarkup()
+founda.insert(InlineKeyboardButton('Посмотреть | Qarash',url='https://www.mr-it.uz/courses/3'))
+
+int_ext = InlineKeyboardMarkup()
+int_ext.insert(InlineKeyboardButton('Посмотреть | Qarash',url='https://www.mr-it.uz/courses/4'))
+
+front = InlineKeyboardMarkup()
+front.insert(InlineKeyboardButton('Посмотреть | Qarash',url='https://www.mr-it.uz/courses/5'))
+
+pyth = InlineKeyboardMarkup()
+pyth.insert(InlineKeyboardButton('Посмотреть | Qarash',url='https://www.mr-it.uz/courses/6'))
+
+video = InlineKeyboardMarkup()
+video.insert(InlineKeyboardButton('Посмотреть | Qarash',url='https://www.mr-it.uz/courses/7'))
+
+pc = InlineKeyboardMarkup()
+pc.insert(InlineKeyboardButton('Посмотреть | Qarash',url='https://www.mr-it.uz/courses/8'))
+
+diza = InlineKeyboardMarkup()
+diza.insert(InlineKeyboardButton('Посмотреть | Qarash',url='https://www.mr-it.uz/courses/9'))
+

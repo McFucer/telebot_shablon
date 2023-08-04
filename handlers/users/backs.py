@@ -25,7 +25,7 @@ WARNING = '''EDIT_REPLY_MARKUP ДЛЯ ИЗМЕНЕНИЕ инлайн кнопо
 
 @dp.callback_query_handler(text='back_uzb',state='Uzbek')
 async def uzbek_contains(call:CallbackQuery,state:FSMContext):
-    await call.message.answer('Men MR_IT - botiman.\nMen sizga quyidagi operatsiyalarda yordam bera olaman👇:')
+    await call.message.edit_text('Men MR_IT - botiman.\nMen sizga quyidagi operatsiyalarda yordam bera olaman👇:')
     await call.message.edit_reply_markup(reply_markup=starting_menu_uzb)
 
 
@@ -33,10 +33,8 @@ async def uzbek_contains(call:CallbackQuery,state:FSMContext):
 @dp.callback_query_handler(text='back',state='Russian')
 async def rus_contains(call:CallbackQuery, state: FSMContext):
 
-    await call.message.edit_text('jn')
-    try:
-        await call.message.edit_reply_markup('f',reply_markup=starting_menu)
-    except Exception:
-        await call.message.edit_reply_markup(reply_markup=starting_menu)
+    await call.message.edit_text('Я бот - MR_IT.\nМогу помочь вам в следующих операций👇:')
+
+    await call.message.edit_reply_markup(reply_markup=starting_menu)
 
 
