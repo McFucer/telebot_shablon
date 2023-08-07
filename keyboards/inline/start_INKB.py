@@ -5,32 +5,35 @@ from keyboards.inline.callback_data import callbacks
 starting_menu = InlineKeyboardMarkup(
     inline_keyboard=[
     [
-        InlineKeyboardButton(text='Тест по профессиональной ориентации',callback_data='Test'),
+        InlineKeyboardButton(text='Тест по профессиональной ориентации👨🏼‍💻',callback_data='Test'),
     ],
     [
-        InlineKeyboardButton(text='Курсы',callback_data='courses'),
+        InlineKeyboardButton(text='Курсы📋',callback_data='courses'),
+        InlineKeyboardButton(text='У меня есть вопросы❓', url='https://telegra.ph/Voprosy-i-Otvety--MR-IT-08-04'),
     ],
     [
-        InlineKeyboardButton(text='Наш сайт',web_app=WebAppInfo(url='https://www.mr-it.uz/home')),
-        InlineKeyboardButton(text='У меня есть вопросы', url='https://telegra.ph/Voprosy-i-Otvety--MR-IT-08-04'),
+        InlineKeyboardButton(text='Наш сайт📎',web_app=WebAppInfo(url='https://www.mr-it.uz/home')),
+
     ],
     [
-        InlineKeyboardButton(text='Прочие',callback_data='another')
+        InlineKeyboardButton(text='Прочие...',callback_data='another')
     ],
 ])
 starting_menu_uzb = InlineKeyboardMarkup(
     inline_keyboard=[
     [
-        InlineKeyboardButton(text="Ishga yo'naltirish testi",callback_data='Test_uzb'),
+        InlineKeyboardButton(text="Ishga yo'naltirish testi👨🏼‍💻",callback_data='Test_uzb'),
     ],
     [
-        InlineKeyboardButton(text='Kurslar',callback_data='courses_uzb'),
+        InlineKeyboardButton(text='Kurslar📋',callback_data='courses_uzb'),
+        InlineKeyboardButton(text='Menda savollar bor❓', url='https://telegra.ph/Savol-va-javoblar--MR-IT-08-06'),
     ],
     [
-        InlineKeyboardButton(text='Bizning veb-saytimiz',web_app=WebAppInfo(url='https://www.mr-it.uz/home'))
+        InlineKeyboardButton(text='Bizning veb-saytimiz📎',web_app=WebAppInfo(url='https://www.mr-it.uz/home')),
+
     ],
     [
-        InlineKeyboardButton(text='Boshqalar',callback_data='another_uzb')
+        InlineKeyboardButton(text='Boshqalar...',callback_data='another_uzb')
     ],
 ])
 lang = InlineKeyboardMarkup(
@@ -94,28 +97,37 @@ courses_uzb = InlineKeyboardMarkup(row_width=3,
 
 mobilgr = InlineKeyboardMarkup()
 mobilgr.insert(InlineKeyboardButton('Посмотреть | Qarash',url='https://www.mr-it.uz/courses/1'))
+mobilgr.insert(InlineKeyboardButton('Назад | Orqaga', callback_data='back_from_courses'))
 
 scratch = InlineKeyboardMarkup()
 scratch.insert(InlineKeyboardButton('Посмотреть | Qarash',url='https://www.mr-it.uz/courses/2'))
+scratch.insert(InlineKeyboardButton('Назад | Orqaga', callback_data='back_from_courses'))
 
 founda = InlineKeyboardMarkup()
 founda.insert(InlineKeyboardButton('Посмотреть | Qarash',url='https://www.mr-it.uz/courses/3'))
+founda.insert(InlineKeyboardButton('Назад | Orqaga', callback_data='back_from_courses'))
 
 int_ext = InlineKeyboardMarkup()
 int_ext.insert(InlineKeyboardButton('Посмотреть | Qarash',url='https://www.mr-it.uz/courses/4'))
+int_ext.insert(InlineKeyboardButton('Назад | Orqaga', callback_data='back_from_courses'))
 
 front = InlineKeyboardMarkup()
 front.insert(InlineKeyboardButton('Посмотреть | Qarash',url='https://www.mr-it.uz/courses/5'))
+front.insert(InlineKeyboardButton('Назад | Orqaga', callback_data='back_from_courses'))
 
 pyth = InlineKeyboardMarkup()
 pyth.insert(InlineKeyboardButton('Посмотреть | Qarash',url='https://www.mr-it.uz/courses/6'))
+pyth.insert(InlineKeyboardButton('Назад | Orqaga', callback_data='back_from_courses'))
 
 video = InlineKeyboardMarkup()
 video.insert(InlineKeyboardButton('Посмотреть | Qarash',url='https://www.mr-it.uz/courses/7'))
+video.insert(InlineKeyboardButton('Назад | Orqaga', callback_data='back_from_courses'))
 
 pc = InlineKeyboardMarkup()
 pc.insert(InlineKeyboardButton('Посмотреть | Qarash',url='https://www.mr-it.uz/courses/8'))
+pc.insert(InlineKeyboardButton('Назад | Orqaga', callback_data='back_from_courses'))
 
 diza = InlineKeyboardMarkup()
 diza.insert(InlineKeyboardButton('Посмотреть | Qarash',url='https://www.mr-it.uz/courses/9'))
+diza.insert(InlineKeyboardButton('Назад | Orqaga', callback_data='back_from_courses'))
 
