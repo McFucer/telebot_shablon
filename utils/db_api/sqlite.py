@@ -70,6 +70,23 @@ class Database:
 
         return self.execute(sql, fetchall=True)
 
+    # def select_userid(self, **kwargs):
+    #     # SQL_EXAMPLE = "SELECT * FROM Users where id=1 AND Name='John'"
+    #     sql = "SELECT * FROM Users WHERE id=?"
+    #     sql, parameters = self.format_args(sql, kwargs)
+    #
+    #     return self.execute(sql, parameters=parameters, fetchone=True)
+
+    def check_user_registration(self, user_id):
+        sql = "SELECT * FROM Users WHERE id = ?"
+        result = self.execute(sql, parameters=(user_id,), fetchone=True)
+        if result is not None:
+            # Зарегистрированный пользователь
+            return True
+        else:
+            # Незарегистрированный пользователь
+            return False
+
     def select_user(self, **kwargs):
         # SQL_EXAMPLE = "SELECT * FROM Users where id=1 AND Name='John'"
         sql = "SELECT * FROM Users WHERE "

@@ -1,3 +1,4 @@
+import asyncio
 import sqlite3
 
 from aiogram import types
@@ -7,11 +8,25 @@ from aiogram.types import CallbackQuery
 from keyboards.default.contact import kb
 from keyboards.default.menu_kb import menu, menu_uzb
 from keyboards.inline.start_INKB import lang, starting_menu, starting_menu_uzb
-from loader import dp, db
+from loader import dp, db, bot
 
 
 @dp.message_handler(commands='start')
+async def check_user_reg(msg: types.Message, state: FSMContext):
+    user_id = msg.from_user.id
+    if db.check_user_registration(user_id):
+        await state.finish()
+        await state.set_state('Language')
+        await msg.answer("Выберите язык:\nTil tanlang:", reply_markup=lang)
+    else:
+        await state.set_state('Register')
+        await msg.answer(
+            'Напишите ваш номер телефона или нажмите кнопку "Отправить контакты":\nTelefon raqamingizni yozing yoki pastaga "Kontakt yuborish" tugmasini bosing:',
+            reply_markup=kb)
+
+@dp.message_handler()
 async def set_state(msg: types.Message, state: FSMContext):
+
     await state.set_state('Register')
     await msg.answer('Напишите ваш номер телефона или нажмите кнопку "Отправить контакты":\nTelefon raqamingizni yozing yoki pastaga "Kontakt yuborish" tugmasini bosing:',reply_markup=kb)
 
