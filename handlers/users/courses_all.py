@@ -9,7 +9,7 @@ from loader import dp
 
 @dp.callback_query_handler(text='mobilgr',state='Russian')
 async def mobilogr(call:CallbackQuery):
-    await call.message.answer('Научитесь создавать высококачественные видео'
+    await call.message.answer('Мобилография:\nНаучитесь создавать высококачественные видео'
                               ' и изображения, а также редактировать их, '
                               'правильно используя возможности телефона.'
                               ' Кроме того, на курсе мобилографии за 2'
@@ -59,7 +59,7 @@ async def scratchacaax(call:CallbackQuery):
 
 @dp.callback_query_handler(text='mobilgr_uzb',state='Uzbek')
 async def mobilogrsaca(call:CallbackQuery):
-    await call.message.answer('Telefon imkoniyatlaridan to’g’ri foydalanish orqali yuqori sifatli videolar va rasmlar yaratish, shuningdek, ularni tahrirlashni o’rganing. Bundan tashqari, mobilografiya kursida siz videodagi rasm, musiqa, tovush, rang va boshqa effektlar bilan ishlashni 2 oyda o’rganasiz. Barcha mavzular soddalashtirilgan tarzda, noldan boshlab o’tiladi.', reply_markup=mobilgr)
+    await call.message.answer('Mobilografiya:\nTelefon imkoniyatlaridan to’g’ri foydalanish orqali yuqori sifatli videolar va rasmlar yaratish, shuningdek, ularni tahrirlashni o’rganing. Bundan tashqari, mobilografiya kursida siz videodagi rasm, musiqa, tovush, rang va boshqa effektlar bilan ishlashni 2 oyda o’rganasiz. Barcha mavzular soddalashtirilgan tarzda, noldan boshlab o’tiladi.', reply_markup=mobilgr)
 @dp.callback_query_handler(text='scratch_uzb',state='Uzbek')
 async def scratchsac(call:CallbackQuery):
     await call.message.answer('Scratch – bu bolalar uchun mo’ljallangan kurs bo’lib, unda siz dasturlash asoslari, qiziqarli o’yinlar, animatsiyalar yaratish va Scratch da rasm chizishni o’rganasiz. Shuningdek, ushbu kurs sizning mantiqiy fikrlashingizni yaxshilab, algoritmlarni o’rganishingizga yordam beradi. Yuqorida keltirilgan barcha narsalarni siz atigi 2 oyda o’rganasiz. Barcha mavzular soddalashtirilgan tarzda, noldan boshlab o’tiladi.',

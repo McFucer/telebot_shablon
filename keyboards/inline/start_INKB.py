@@ -5,7 +5,7 @@ from keyboards.inline.callback_data import callbacks
 starting_menu = InlineKeyboardMarkup(
     inline_keyboard=[
     [
-        InlineKeyboardButton(text='Тест по профессиональной ориентации👨🏼‍💻',callback_data='Test'),
+        InlineKeyboardButton(text='Тест по профессиональной ориентации👨🏼‍💻',web_app=WebAppInfo(url='https://www.profguide.io/test/klimov.html')),
     ],
     [
         InlineKeyboardButton(text='Курсы📋',callback_data='courses'),
@@ -22,7 +22,7 @@ starting_menu = InlineKeyboardMarkup(
 starting_menu_uzb = InlineKeyboardMarkup(
     inline_keyboard=[
     [
-        InlineKeyboardButton(text="Ishga yo'naltirish testi👨🏼‍💻",callback_data='Test_uzb'),
+        InlineKeyboardButton(text="Ishga yo'naltirish testi👨🏼‍💻",web_app=WebAppInfo(url='https://proweb.uz/uz/tests')),
     ],
     [
         InlineKeyboardButton(text='Kurslar📋',callback_data='courses_uzb'),

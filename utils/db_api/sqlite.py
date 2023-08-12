@@ -54,16 +54,21 @@ class Database:
         """
         self.execute(sql, parameters=(id, name, phone, language), commit=True)
 
+    def for_reklama(self):
+        sql = """
+                SELECT * FROM Users
+                """
+        # Добавление переноса строки
+        users = self.execute(sql, fetchall=True)
+        users_with_line_break = "\n".join([str(user) + "\n" for user in users])
+
+        return users_with_line_break
     def select_all_users(self):
         sql = """
         SELECT * FROM Users
         """
-        users = self.execute(sql, fetchall=True)
 
-        # Добавление переноса строки
-        users_with_line_break = "\n".join([str(user) + "\n" for user in users])
-
-        return users_with_line_break
+        return self.execute(sql, fetchall=True)
 
     def select_user(self, **kwargs):
         # SQL_EXAMPLE = "SELECT * FROM Users where id=1 AND Name='John'"

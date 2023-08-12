@@ -8,7 +8,7 @@ from keyboards.inline.start_INKB import starting_menu, lang, courses
 from loader import dp
 from keyboards.default.menu_kb import menu, menu_uzb
 
-
+@dp.message_handler(Text(equals='Основное меню',ignore_case=True), state='Russian')
 @dp.message_handler(commands=['menu','start'],state='Russian')
 async def rus_contain(msg:types.Message):
     await msg.answer('''Я бот - MR_IT.
@@ -16,7 +16,7 @@ async def rus_contain(msg:types.Message):
 <code>https://t.me/mr_it_uz</code>''',reply_markup=starting_menu)
     await msg.delete()
 
-
+@dp.message_handler(Text(equals='Asosiy menyu',ignore_case=True), state='Russian')
 @dp.message_handler(commands=['menu','start'],state='Uzbek')
 async def uzbek_contains(msg:types.Message):
     await msg.answer('Men MR_IT - botiman.\nMen sizga quyidagi operatsiyalarda yordam bera olaman👇:\n<code>https://t.me/mr_it_uz</code>', reply_markup=starting_menu_uzb)

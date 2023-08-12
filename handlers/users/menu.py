@@ -20,4 +20,3 @@ async def test(call:CallbackQuery):
     await call.message.answer("Mana bizda mavjud bo'lgan kurslar ro'yxati👇:", reply_markup=courses_uzb)
     await call.message.delete()
     await call.answer(cache_time=60)
-
