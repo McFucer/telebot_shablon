@@ -93,6 +93,10 @@ class Database:
         sql, parameters = self.format_args(sql, kwargs)
 
         return self.execute(sql, parameters=parameters, fetchone=True)
+    def selectUSER_4channel(self,user_id):
+        sql = "SELECT * FROM Users WHERE id = ?"
+        result = self.execute(sql, parameters=(user_id,), fetchone=True)
+        return result
 
     def count_users(self):
         return self.execute("SELECT COUNT(*) FROM Users;", fetchone=True)

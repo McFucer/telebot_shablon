@@ -131,3 +131,10 @@ diza = InlineKeyboardMarkup()
 diza.insert(InlineKeyboardButton('Посмотреть | Qarash',url='https://www.mr-it.uz/courses/9'))
 diza.insert(InlineKeyboardButton('Назад | Orqaga', callback_data='back_from_courses'))
 
+contact_send = InlineKeyboardMarkup()
+contact_send.insert(InlineKeyboardButton('Отправить данные☑️',callback_data='contact_s'))
+contact_send.insert(InlineKeyboardButton('Основное меню💾',callback_data='back'))
+
+contact_senduz = InlineKeyboardMarkup()
+contact_senduz.insert(InlineKeyboardButton("Ma'lumotlarni yuborish☑️",callback_data='contact_s_uzb'))
+contact_senduz.insert(InlineKeyboardButton('Asosiy menyu💾',callback_data='back_uzb'))

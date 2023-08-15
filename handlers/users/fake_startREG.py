@@ -24,7 +24,7 @@ async def check_user_reg(msg: types.Message, state: FSMContext):
             'Напишите ваш номер телефона или нажмите кнопку "Отправить контакты":\nTelefon raqamingizni yozing yoki pastaga "Kontakt yuborish" tugmasini bosing:',
             reply_markup=kb)
 
-@dp.message_handler()
+@dp.message_handler(commands='start')
 async def set_state(msg: types.Message, state: FSMContext):
 
     await state.set_state('Register')
