@@ -16,6 +16,9 @@ starting_menu = InlineKeyboardMarkup(
 
     ],
     [
+        InlineKeyboardButton(text='Свяжитесь со мной☎️',callback_data='sos')
+    ],
+    [
         InlineKeyboardButton(text='Прочие...',callback_data='another')
     ],
 ])
@@ -33,6 +36,9 @@ starting_menu_uzb = InlineKeyboardMarkup(
 
     ],
     [
+        InlineKeyboardButton(text="Men bilan bog'laning☎️",callback_data='sos_uzb')
+    ],
+    [
         InlineKeyboardButton(text='Boshqalar...',callback_data='another_uzb')
     ],
 ])
@@ -40,8 +46,17 @@ lang = InlineKeyboardMarkup(
     inline_keyboard=[
     [
         InlineKeyboardButton(text="O'zbek tili",callback_data='uzbek'),
-        InlineKeyboardButton(text='Русский Язык',callback_data='rus'),
+        InlineKeyboardButton(text='Русский язык',callback_data='rus'),
     ],
+])
+
+lang_start = InlineKeyboardMarkup(
+    inline_keyboard=[
+    [
+        InlineKeyboardButton(text="O'zbek tili",callback_data='start_uzb'),
+        InlineKeyboardButton(text="Русский язык",callback_data='start_rus'),
+    ],
+
 ])
 
 courses = InlineKeyboardMarkup(row_width=3,
