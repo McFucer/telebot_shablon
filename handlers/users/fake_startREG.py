@@ -20,9 +20,9 @@ async def user_in_while(msg: types.Message, state: FSMContext):
         await state.finish()
         await state.set_state('Language')
         await msg.answer("Выберите язык:\nTil tanlang:", reply_markup=lang)
-    await msg.delete()
-    await msg.answer("Выберите язык:\nTil tanlang:", reply_markup=lang_start)
-    await state.set_state('Language')
+    else:
+        await msg.answer("Выберите язык:\nTil tanlang:", reply_markup=lang_start)
+        await state.set_state('Language')
 
 
 @dp.callback_query_handler(text='start_rus', state='Language')
