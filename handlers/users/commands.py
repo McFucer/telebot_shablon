@@ -4,7 +4,7 @@ from aiogram.dispatcher.filters.builtin import CommandStart, Text
 from aiogram.types import ReplyKeyboardRemove, CallbackQuery
 
 from data.config import CHANNELS
-from keyboards.inline.start_INKB import courses, courses_uzb, contact_send, contact_senduz
+from keyboards.inline.start_INKB import courses, courses_uzb, contact_send, contact_senduz, seti
 
 from keyboards.inline.start_INKB import starting_menu, lang, courses
 from loader import dp, db, bot
@@ -60,7 +60,12 @@ async def contact_inline(call:CallbackQuery, state=FSMContext):
         await bot.send_message(chat_id=target_channel, text=user_text)
         await call.answer('Yaqin vaqtda siz bilan aloqaga chiqamiz, "Asosiy menyu" tugmasini bosing',show_alert=True)
 
-# ANOTHER... CALLBACK MENU DATA
 
-# @dp.callback_query_handler(text='another')
-# async def
+@dp.callback_query_handler(text='another',state='Russian')
+async def another_menu(call:CallbackQuery):
+    await call.message.edit_text('Снизу находятся наши социальные сети👇',reply_markup=seti)
+
+@dp.callback_query_handler(text='another_uzb',state='Uzbek')
+async def another_menu(call:CallbackQuery):
+    await call.message.edit_text('Bizning ijtimoiy tarmoqlarimiz👇')
+    await call.message.edit_reply_markup(reply_markup=seti)

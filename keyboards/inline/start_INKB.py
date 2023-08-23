@@ -45,16 +45,16 @@ starting_menu_uzb = InlineKeyboardMarkup(
 lang = InlineKeyboardMarkup(
     inline_keyboard=[
     [
-        InlineKeyboardButton(text="O'zbek tili",callback_data='uzbek'),
-        InlineKeyboardButton(text='Русский язык',callback_data='rus'),
+        InlineKeyboardButton(text="🇺🇿O'zbek tili",callback_data='uzbek'),
+        InlineKeyboardButton(text='🇷🇺Русский язык',callback_data='rus'),
     ],
 ])
 
 lang_start = InlineKeyboardMarkup(
     inline_keyboard=[
     [
-        InlineKeyboardButton(text="O'zbek tili",callback_data='start_uzb'),
-        InlineKeyboardButton(text="Русский язык",callback_data='start_rus'),
+        InlineKeyboardButton(text="🇺🇿O'zbek tili",callback_data='start_uzb'),
+        InlineKeyboardButton(text="🇷🇺Русский язык",callback_data='start_rus'),
     ],
 
 ])
@@ -153,3 +153,15 @@ contact_send.insert(InlineKeyboardButton('Основное меню💾',callbac
 contact_senduz = InlineKeyboardMarkup()
 contact_senduz.insert(InlineKeyboardButton("Ma'lumotlarni yuborish☑️",callback_data='contact_s_uzb'))
 contact_senduz.insert(InlineKeyboardButton('Asosiy menyu💾',callback_data='back_uzb'))
+
+
+seti = {
+    'Instagram':'https://www.instagram.com/mr_it/',
+    'Telegram':'https://t.me/mr_it_uz',
+    'TikTok':'https://www.tiktok.com/@upteaapie0f?_r=1&_d=e60j77hc5cld6m&language=en&sec_uid=MS4wLjABAAAAlwMAuiB5meF-Ir14V_aSk9ksj_qC3k3TE2pNSXhniuxJ7sNXfSN8P1iABZoRsrN7&share_author_id=7214041436219425793&source=h5_m&u_code=dgmi7hlj53dj2l&timestamp=1680603913&user_id=6924828201664939014&sec_user_id=MS4wLjABAAAAExZC3qoEjIDkHRM17dsuRUoFQg7F8ykOR2Y0n4S6pNBR2WFnOctXYVsjrpf4B6qe&utm_source=telegram&utm_campaign=client_share&utm_medium=android&share_iid=7217638088586643201&share_link_id=5da424b4-20d5-435b-aa1b-0a658bc3b300&share_app_id=1233&ugbiz_name=Account&ug_btm=b6880%2Cb5836&social_share_type=5',
+    'FaceBook':'https://www.facebook.com/people/Mister_itschool/100090913510545/',
+    'YouTube':'https://www.youtube.com/channel/UCF3Fco5fpdooBEG78ov1q9g',
+}
+seti_menu = InlineKeyboardMarkup(row_width=1)
+for key, value in seti.items():
+    seti_menu.insert(InlineKeyboardButton(text=key,url=value))

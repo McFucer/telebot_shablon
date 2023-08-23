@@ -17,11 +17,11 @@ async def russian_plus(call:CallbackQuery,state: FSMContext):
     await call.message.answer('''Я бот - MR_IT.
     Могу помочь вам в следующих операций👇:
     <code>https://t.me/mr_it_uz</code>''',reply_markup=starting_menu)
-    await state.finish()
+    await call.message.delete()
     await state.set_state('Russian')
 
 @dp.callback_query_handler(text='uzbek',state='Language')
 async def russian_plus(call:CallbackQuery,state: FSMContext):
     await call.message.answer('Men MR_IT - botiman.\nMen sizga quyidagi operatsiyalarda yordam bera olaman👇:\n<code>https://t.me/mr_it_uz</code>', reply_markup=starting_menu_uzb)
-    await state.finish()
+    await call.message.delete()
     await state.set_state('Uzbek')
