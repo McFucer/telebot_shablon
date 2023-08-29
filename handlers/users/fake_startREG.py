@@ -27,13 +27,11 @@ async def user_in_while(msg: types.Message, state: FSMContext):
 
 @dp.callback_query_handler(text='start_rus', state='Language')
 async def rus_start(call: CallbackQuery, state: FSMContext):
-    phone_number_regex = re.compile(r"^(?:\+)?(998)\d{9}$")
     await state.set_state('ru') # not main state
     await call.message.answer('Напишите ваш номер телефона или нажмите кнопку "Отправить контакты📝":', reply_markup=kb)
 
 @dp.callback_query_handler(text='start_uzb', state='Language')
-async def rus_start(call: CallbackQuery, state: FSMContext):
-    phone_number_regex = re.compile(r"^(?:\+)?(998)\d{9}$")
+async def uzb_start(call: CallbackQuery, state: FSMContext):
     await state.set_state('uz') # not main state
     await call.message.answer('Напишите ваш номер телефона или нажмите кнопку "Отправить контакты📝":', reply_markup=kb_uzb)
 

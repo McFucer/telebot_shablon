@@ -6,7 +6,7 @@ from data.config import ADMINS
 from keyboards.inline.start_INKB import lang
 from loader import dp, db, bot
 
-@dp.message_handler(commands="allusers", user_id=ADMINS,state=['Uzbek','Russian','None'])
+@dp.message_handler(commands="allusers", user_id=ADMINS,state=['Uzbek','Russian'])
 async def get_all_users(message: types.Message):
     users = db.for_reklama()
     print(users[0][0])
